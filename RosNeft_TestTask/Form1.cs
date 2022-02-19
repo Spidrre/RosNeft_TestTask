@@ -184,14 +184,14 @@ namespace RosNeft_TestTask
         {
             // run algorithm for each line in List
             if (area != null)
-                foreach (Line l in lines)
-                {
-                    // if true, then Line within/intersects with Area
-                    bool if_hits = collision(l.p1.X, l.p1.Y, l.p2.X, l.p2.Y, area);
-                    if (if_hits)
-                        l.inArea = true; // set property inArea to be true
-
-                }
+            foreach (Line l in lines)
+            {
+                // if true, then Line within/intersects with Area
+                bool if_hits = collision(l.p1.X, l.p1.Y, l.p2.X, l.p2.Y, area); 
+                if (if_hits)
+                    l.inArea = true; // set property inArea to be true
+                
+            }
             else
                 MessageBox.Show("Please create area for this task");
 
